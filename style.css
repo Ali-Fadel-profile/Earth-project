@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Challenge 3 exercise-2 */
+body {
+  background-color: #0a0e27;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.earth {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #1e90ff, #4682b4);
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.6), 0 0 30px rgba(30, 144, 255, 0.4);
+  position: relative;
+}
+
+.moon {
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  animation: moonAnimation 5s infinite linear;
+  z-index: 1;
+}
+
+.moon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes moonAnimation {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: rotate(360deg);
+    transform-origin: bottom;
+  }
+}
